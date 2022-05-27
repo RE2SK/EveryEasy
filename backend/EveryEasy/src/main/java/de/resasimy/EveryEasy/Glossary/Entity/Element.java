@@ -2,10 +2,10 @@ package de.resasimy.EveryEasy.Glossary.Entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -14,13 +14,18 @@ import javax.persistence.Id;
 public class Element {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String id;
 
-    private String name;
+    private String name; //name of the word
 
-    private String simpleDescription;
+    private String simpleDescription; //simple and easy to understand description
 
-    private String extendedDescription;
+    private String extendedDescription; //extended and much detail description
+
+    private String createdByEmail; //email of the user who created this Element
+
+    private String state; //state = "public" || state = "private" |||| If public, everyone can access. If private, just the user who created can access
 
 }
