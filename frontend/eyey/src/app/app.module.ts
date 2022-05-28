@@ -8,15 +8,15 @@ import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { GlossaryComponent } from './components/glossary/glossary.component';
 import { ElementComponent } from './components/element/element.component';
+import { MessengerComponent } from './components/messenger/messenger.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    GlossaryComponent,
-    ElementComponent
+    ElementComponent,
+    MessengerComponent
   ],
   imports: [
     BrowserModule,

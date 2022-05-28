@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GlossaryComponent } from './glossary.component';
+import { MessengerComponent } from './messenger.component';
 
-describe('GlossaryComponent', () => {
-  let component: GlossaryComponent;
-  let fixture: ComponentFixture<GlossaryComponent>;
+describe('MessengerComponent', () => {
+  let component: MessengerComponent;
+  let fixture: ComponentFixture<MessengerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlossaryComponent ]
+      declarations: [ MessengerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GlossaryComponent);
+    fixture = TestBed.createComponent(MessengerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
