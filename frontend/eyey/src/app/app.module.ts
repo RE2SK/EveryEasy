@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 
@@ -19,7 +21,9 @@ import { ElementComponent } from './components/element/element.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    Observable,
+    HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]

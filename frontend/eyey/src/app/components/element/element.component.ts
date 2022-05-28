@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IElement } from 'src/app/interfaces/interfaces';
+import { ElementService } from 'src/app/services/element.service';
 
 @Component({
   selector: 'app-element',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElementComponent implements OnInit {
 
-  constructor() { }
+  elements = new Array<IElement>();
+
+  constructor(public elementService: ElementService) { }
 
   ngOnInit(): void {
+    this.elementService.getAllElements().subscribe(data => {
+      this.elements = data;
+    })
   }
-
 }
